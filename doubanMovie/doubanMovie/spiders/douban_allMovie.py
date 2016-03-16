@@ -12,39 +12,39 @@ class DoubanAllMovie(CrawlSpider):
    allowed_domains = ["douban.com"]
    items_id = set()
    start_urls = [
-    "http://douban.com/tag/%E7%BE%8E%E5%9B%BD/movie",
-    "http://douban.com/tag/%E6%97%A5%E6%9C%AC/movie",
-    "http://douban.com/tag/%E6%B8%AF%E5%8F%B0/movie",
-    "http://douban.com/tag/%E8%8B%B1%E5%9B%BD/movie",
-    "http://douban.com/tag/%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86/movie",
-    "http://douban.com/tag/%E5%86%85%E5%9C%B0/movie",
-    "http://douban.com/tag/%E9%9F%A9%E5%9B%BD/movie",
-    "http://douban.com/tag/%E6%AC%A7%E6%B4%B2/movie",
-    "http://douban.com/tag/%E4%BF%84%E7%BD%97%E6%96%AF/movie",
-    "http://douban.com/tag/%E5%8D%97%E7%BE%8E/movie"
-    # "http://movie.douban.com/top250"
-    # "http://movie.douban.com/subject/19944106/"
+    "https://douban.com/tag/%E7%BE%8E%E5%9B%BD/movie",
+    "https://douban.com/tag/%E6%97%A5%E6%9C%AC/movie",
+    "https://douban.com/tag/%E6%B8%AF%E5%8F%B0/movie",
+    "https://douban.com/tag/%E8%8B%B1%E5%9B%BD/movie",
+    "https://douban.com/tag/%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86/movie",
+    "https://douban.com/tag/%E5%86%85%E5%9C%B0/movie",
+    "https://douban.com/tag/%E9%9F%A9%E5%9B%BD/movie",
+    "https://douban.com/tag/%E6%AC%A7%E6%B4%B2/movie",
+    "https://douban.com/tag/%E4%BF%84%E7%BD%97%E6%96%AF/movie",
+    "https://douban.com/tag/%E5%8D%97%E7%BE%8E/movie"
+    # "https://movie.douban.com/top250"
+    # "https://movie.douban.com/subject/19944106/"
    ]
    
    rules=(
-        #Rule(LinkExtractor(allow=(r'http://movie.douban.com/top250\?start=\d+.*',))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=15'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=30'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=45'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=60'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=75'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=90'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=105'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=120'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=135'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=150'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=165'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=180'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=195'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=210'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=225'))),
-        Rule(LinkExtractor(allow=(r'http://www.douban.com/tag/.*/movie\?start=240'))),
-        Rule(LinkExtractor(allow=(r'http://movie.douban.com/subject/\d+/.*',)),callback="parse_item"),
+        #Rule(LinkExtractor(allow=(r'https://movie.douban.com/top250\?start=\d+.*',))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=15'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=30'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=45'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=60'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=75'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=90'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=105'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=120'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=135'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=150'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=165'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=180'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=195'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=210'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=225'))),
+        Rule(LinkExtractor(allow=(r'https://www.douban.com/tag/.*/movie\?start=240'))),
+        Rule(LinkExtractor(allow=(r'https://movie.douban.com/subject/\d+/.*',)),callback="parse_item"),
    )
    
    
@@ -58,9 +58,9 @@ class DoubanAllMovie(CrawlSpider):
         item['score']=sel.xpath('//strong[@class="ll rating_num"]/text()').extract()
         item['cover'] = sel.xpath('//div[@id="mainpic"]/a/@href').extract_first()
         item_preurl = response.url
-        movieid = re.match('http://.*/.*/(.*)/.*', item_preurl).group(1)
-        #movieid = re.match(r'http://.*/.*/(.*)/.*', item_preurl).group(1)
-        item['url']=r'http://movie.douban.com/subject/'+movieid+r'/'
+        movieid = re.match('https://.*/.*/(.*)/.*', item_preurl).group(1)
+        #movieid = re.match(r'https://.*/.*/(.*)/.*', item_preurl).group(1)
+        item['url']=r'https://movie.douban.com/subject/'+movieid+r'/'
         item['movieid'] =movieid
         #item['director']=sel.xpath('//*[@id="info"]/span[1]/a/text()').extract()
         item['director']=sel.xpath('//span[@class="attrs"]/a[@rel="v:directedBy"]/text()').extract()
